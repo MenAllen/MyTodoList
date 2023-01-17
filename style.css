@@ -1,0 +1,95 @@
+body {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+  font-family: Roboto!important;
+  font-size: 18px;
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+/* =============================== Header =============================== */
+.topnav {
+	overflow: hidden;
+}
+
+.header-logo {
+	float: left;
+}
+.main-navbar {
+	float: right;
+}
+.topnav a {
+	float: left;
+	display: block;
+	color: #000000;
+	text-align: center;
+	padding: 12px 12px;
+	margin: 5px;
+	text-decoration: none;
+	font-size: 18px;
+	font-family: Roboto, sans-serif;
+}
+
+.topnav a:hover {
+  background-color: rgb(89,110,15,1);
+	color: #ffffff;
+	border-radius: 15px;
+}
+
+.topnav a.active {
+  background-color: rgb(89,110,15,1);
+	color: #ffffff;
+	border-radius: 15px;
+	text-decoration: underline;
+	text-underline-position: under;
+}
+
+.topnav .icon {
+	display: none;
+}
+
+/* =============================== Main =============================== */
+
+.title-selection {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin-right: 1rem;
+  padding-top: 4px;
+}
+
+.hide-completed .is-completed,
+.hide-todo .todo:not(.is-completed) {
+    display: none!important;
+}
+         
+.bg-color-custom {
+  background-color: #96ab49!important;}
+
+.bg-color-custom-dark {
+  background-color: rgb(89,110,15,1)!important;}
+
+.bg-border-color-dark {
+  border-color: rgb(89,110,15,1)!important;
+  color: white;
+}
+
+.active-custom {
+  background-color: rgb(89,110,15,1)!important;
+  border-color: rgb(89,110,15,1)!important;
+  color: white!important;
+}
+
+.btn-outline-custom {
+  border-color: rgb(89,110,15,1)!important;
+}
+
+button:hover {
+  background-color: rgb(89,110,15,1)!important;
+}
+
+.form-check-input:checked {
+  background-color:rgb(89,110,15,1)!important;
+  border-color: rgb(89,110,15,1)!important;
+}
