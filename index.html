@@ -21,18 +21,44 @@
 					<img alt="logo" src="./LogoWh.webp" />
 				</div>
 				<div class="main-navbar">
-					<a href="#" class="active"><span>List</span></a>
-					<a href="#"><span>Data</span></a>
-					<a href="javascript:void(0);" class="icon active" onclick="editNav()">
-						<i class="fa fa-bars"></i>
-					</a>
+					<a href="#" class="menu active" data-filter="list"><span>List</span></a>
+					<a href="#" class="menu" data-filter="import"><span>Import</span></a>
+					<a href="#" class="menu" data-filter="export"><span>Export</span></a>
 				</div>
 			</div>
 		</header>
 
-		<!-- -->
-
+		<!-- Affichage de la liste des tâches -->
 		<section class="container pt-5 bg-color-custom" id="todolist"></section>
+
+		<!-- Déclaration de la Modale Export -->
+		<div id="exportModal" class="Emodal">
+			<!-- Modal content -->
+			<div class="modal-content">
+				<p><strong>Contenu de la TodoList</strong></p>
+				<br />
+				<div id="dataDisplay" class="clipBoard"></div>
+				<div class="btnBlock">
+					<button class="copyClip">Copy to Clipboard</button>
+					<button class="eclose">Close</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Déclaration de la Modale Import -->
+		<div id="importModal" class="Imodal">
+			<!-- Modal content -->
+			<form class="modal-content">
+				<p><strong>Attention: vous allez recharger la TodoList à partir d'un fichier JSON.</strong></p>
+				<p>Si vous ne souhaitez pas écraser la configuration actuelle, cliquez sur <strong>CANCEL</strong></p>
+				<br />
+				<input id="inputFile" type="file" accept=".json,.JSON" />
+				<div class="btnBlock">
+					<button class="icancel">Cancel</button>
+					<button class="iclose">OK</button>
+				</div>
+			</form>
+		</div>
 
 		<script src="app.js" type="module" defer></script>
 	</body>

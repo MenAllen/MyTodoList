@@ -21,17 +21,15 @@ export class TodoList {
 
 	/** @param {Todo[]} todos */
 	constructor(todos) {
-    console.log('constructor todos')
 		this.#todos = todos;
     this.#filterAction = 'all'
-    console.log('end constructor todos')
+    localStorage.setItem('todos', JSON.stringify(todos))
 	}
 
 	/** @param {HTMLElement} element */
 	appendTo(element) {
-    console.log('appendTos', element)
 		element.innerHTML = `<main>
-    <ul class="list-group">
+    <ul class="list-group list-height">
     </ul>
     <form class="d-flex pb-4 pt-5">
       <input
@@ -50,7 +48,7 @@ export class TodoList {
         Toutes tâches
       </button>
       <button type="button" class="btn btn-outline-custom" data-filter="todo">Tâches à faire</button>
-      <button type="button" class="btn btn-outline-custom" data-filter="done">Tâches Faites</button>
+      <button type="button" class="btn btn-outline-custom" data-filter="done">Tâches faites</button>
     </div>
   </main>`;
 
@@ -65,7 +63,6 @@ export class TodoList {
 
     this.#listElement.addEventListener('delete', ({detail: todo}) => {
       this.#todos = this.#todos.filter( t => t !== todo)
-      console.log(this.#todos, todo)
       this.onUpdate()
     })
 
@@ -74,7 +71,6 @@ export class TodoList {
       this.onUpdate()
     })
 
-    console.log('end appendTos')
 	}
 
   /**
@@ -108,11 +104,9 @@ export class TodoList {
    */
   #toggleFilter(e) {
     e.preventDefault()
-    console.log(e.currentTarget)
     this.#filterAction = e.currentTarget.getAttribute('data-filter')
     e.currentTarget.parentElement.querySelector('.active-custom').classList.remove('active-custom')
     e.currentTarget.classList.add('active-custom')
-    console.log('filterAction: ', this.#filterAction)
 
     if (this.#filterAction === 'todo') {
       this.#listElement.classList.add('hide-completed')
@@ -138,7 +132,6 @@ export class TodoListItem {
 
 	/** @param {Todo} todo */
 	constructor(todo) {
-    console.log('constructor todo')
     this.#todo = todo;
 		const id = `todo-${todo.id}`;
 		const li = createElement("li", {
@@ -172,7 +165,6 @@ export class TodoListItem {
     button.addEventListener('click', e => this.remove(e))
     checkbox.addEventListener('click', e => this.toggle(e.currentTarget))
 
-    console.log('end constructor todo')
 	}
 
   /**
@@ -185,7 +177,6 @@ export class TodoListItem {
   /** @param {PointerEvent} e */
   remove(e) {
     e.preventDefault()
-    console.log(this.#todo)
     const event = new CustomEvent('delete', {
       detail: this.#todo,
       bubbles: true

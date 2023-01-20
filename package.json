@@ -1,0 +1,19 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "App de gestion de liste de tâches",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MenAllen/MyTodoList.git"
+  },
+  "author": "MenAllen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MenAllen/MyTodoList/issues"
+  },
+  "homepage": "https://github.com/MenAllen/MyTodoList#readme"
+}
