@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Une TodoList persistante, simple et accessible !">
 		<title>TodoList</title>
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
@@ -39,8 +40,8 @@
 				<br />
 				<div id="dataDisplay" class="clipBoard"></div>
 				<div class="btnBlock">
-					<button class="copyClip">Copy to Clipboard</button>
-					<button class="eclose">Close</button>
+					<button class="copyClip" aria-label="copy">Copy to Clipboard</button>
+					<button class="eclose" aria-label="close export">Close</button>
 				</div>
 			</div>
 		</div>
@@ -50,12 +51,12 @@
 			<!-- Modal content -->
 			<form class="modal-content">
 				<p><strong>Attention: vous allez recharger la TodoList à partir d'un fichier JSON.</strong></p>
-				<p>Si vous ne souhaitez pas écraser la configuration actuelle, cliquez sur <strong>CANCEL</strong></p>
+				<p>Si vous ne souhaitez pas écraser la configu ration actuelle, cliquez sur <strong>CANCEL</strong></p>
 				<br />
 				<input id="inputFile" type="file" accept=".json,.JSON" />
 				<div class="btnBlock">
-					<button class="icancel">Cancel</button>
-					<button class="iclose">OK</button>
+					<button class="icancel" aria-label="cancel import">Cancel</button>
+					<button class="iclose" aria-label="close import">OK</button>
 				</div>
 			</form>
 		</div>

@@ -40,15 +40,15 @@ export class TodoList {
       name="title"
       data-com.bitwarden.browser.user-edited="yes"
       />
-      <button class="btn btn-primary bg-color-custom-dark bg-border-color-dark">Ajouter</button>
+      <button class="btn btn-primary bg-color-custom-dark bg-border-color-dark" aria-label="add a todo">Ajouter</button>
     </form>
     <div class="btn-group mb-4" role="group">
       <div class="title-selection">Sélection</div>
-      <button type="button" class="btn btn-outline-custom active-custom" data-filter="all">
+      <button type="button" class="btn btn-outline-custom active-custom" data-filter="all" aria-label="filtre toutes tâches">
         Toutes tâches
       </button>
-      <button type="button" class="btn btn-outline-custom" data-filter="todo">Tâches à faire</button>
-      <button type="button" class="btn btn-outline-custom" data-filter="done">Tâches faites</button>
+      <button type="button" class="btn btn-outline-custom" data-filter="todo" aria-label="filtre tâches à faire">Tâches à faire</button>
+      <button type="button" class="btn btn-outline-custom" data-filter="done" aria-label="filtre tâches faites">Tâches faites</button>
     </div>
   </main>`;
 

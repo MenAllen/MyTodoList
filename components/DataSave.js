@@ -48,7 +48,7 @@ export function manageData(event, dataFile) {
 		const modal = document.getElementById("importModal");
 		modal.style.display = "block";
 
-		// Get the OK <button> element that saves the data & closes the modal
+		// Get the OK button element that saves the data & closes the modal
 		const icloseBtn = document.getElementsByClassName("iclose")[0];
 
 		// When the user clicks on OK, register the value selected and close the modal
@@ -72,7 +72,7 @@ export function manageData(event, dataFile) {
 
 		};
 
-		// Get the CANCEL <button> element that closes the modal
+		// Get the CANCEL button element that closes the modal
 		const icancelBtn = document.getElementsByClassName("icancel")[0];
 
 		// When the user clicks on CANCEL, just close the modal
