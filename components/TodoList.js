@@ -154,6 +154,7 @@ export class TodoListItem {
 
 		const button = createElement("button", {
 			class: "ms-auto btn btn-danger btn-sm bg-color-custom-dark bg-border-color-dark",
+      name: "delete task"
 		});
 		button.innerHTML = '<i class="bi-trash"> </i>';
 
